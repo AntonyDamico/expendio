@@ -1,0 +1,20 @@
+{
+  "name": "expendio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "access-db": "docker exec -it mysql bash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonyDamico/expendio.git"
+  },
+  "author": "Antony D'Amico <antonydamico29@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonyDamico/expendio/issues"
+  },
+  "homepage": "https://github.com/AntonyDamico/expendio#readme"
+}
