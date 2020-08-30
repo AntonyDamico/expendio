@@ -1,11 +1,12 @@
 import { createConnection, Connection } from 'typeorm';
 import dotenv from 'dotenv';
 import { join } from 'path';
+import IConnection from './IConnection';
 
 dotenv.config();
 
-export default class TypeOrmConnection {
-  public static createConnection(): Promise<Connection> {
+export default class TypeOrmConnection implements IConnection {
+  public initialize(): Promise<Connection> {
     return createConnection({
       // name: 'default',
       type: 'mysql',

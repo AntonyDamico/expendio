@@ -1,11 +1,11 @@
 import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
-import TypeOrmConnection from './config/TypeOrmConnection';
+import IConnection from './config/IConnection';
 
 export default class Server {
   private app: Application;
 
-  public constructor() {
+  public constructor(private connection: IConnection) {
     this.setApp();
     this.loadConnection();
     this.loadPlugins();
@@ -17,7 +17,7 @@ export default class Server {
   }
 
   private loadConnection(): void {
-    TypeOrmConnection.createConnection();
+    this.connection.initialize();
   }
 
   private loadPlugins(): void {
