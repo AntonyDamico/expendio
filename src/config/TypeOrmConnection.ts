@@ -16,7 +16,7 @@ export default class TypeOrmConnection {
       database: process.env.DB_DATABASE,
       synchronize: true,
       logging: false,
-      entities: [join(__dirname, `../modules/**/*Entity.{ts,js}`)],
+      entities: [join(__dirname, `../modules/**/*.{ts,js}`)],
       // entities: [join(__dirname, `../**/*.js`)],
     });
   }

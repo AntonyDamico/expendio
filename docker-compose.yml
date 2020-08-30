@@ -5,6 +5,8 @@ services:
     image: mysql:8
     container_name: mysql
     command: --default-authentication-plugin=mysql_native_password
+    cap_add:
+        - SYS_NICE  # CAP_SYS_NICE
     volumes:
         - ./data/db:/var/lib/mysql
     restart: always
