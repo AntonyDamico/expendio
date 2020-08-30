@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import Server from './Server';
 import dotenv from 'dotenv';
 
